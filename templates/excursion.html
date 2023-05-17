@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Екскурсії</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+    <link href="{% static "Images/zooImg.jpg" %}" rel="icon">
+    <script src="{% static "JS/excursion.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius"><a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink currentPage"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії
+                з гідом </a></div>
+            <div class="internalLink downRadius"><a href="/zoo/getAllExcursions" class="navbarTextLink"> all exc </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo/news" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+<div class="textContainer">
+
+    <form class="inputDiv" id="form" method="get">
+        <h2>Оберіть дату коли Ви хочете відвідвати наш зоопарк: </h2>
+{#        <input type="date" name="date" required class="inputBox">#}
+        {{ form.date }}
+
+
+        <h2>Оберіть час коли Ви хочете відвідвати наш зоопарк(зоопарк працює з 10 до 18): </h2>
+{#        <select name="time" required class="inputBox">#}
+{#            <option value=""> Оберіть час</option>#}
+{#            <option value="10"> 10:00</option>#}
+{#            <option value="11"> 11:00</option>#}
+{#            <option value="12"> 12:00</option>#}
+{#            <option value="13"> 13:00</option>#}
+{#            <option value="14"> 14:00</option>#}
+{#            <option value="15"> 15:00</option>#}
+{#            <option value="16"> 16:00</option>#}
+{#            <option value="17"> 17:00</option>#}
+{#            <option value="18"> 18:00</option>#}
+{#        </select>#}
+        {{ form.time }}
+
+
+        <h2>Введіть Ваше прізвище та ім'я: </h2>
+{#        <input type="text" id="name" name="name" required class="inputBox">#}
+        {{ form.name }}
+
+
+        <h2>Введіть Ваш контактний телефон: </h2>
+{#        <input type="tel" id="phone" name="phone" required class="inputBox">#}
+        {{ form.phone }}
+
+
+        <h2>Скільки людей буде на екскурсії </h2>
+{#        <input type="number" id="peopleAmount" name="peopleAmount" required class="inputBox" min="5" max="20">#}
+        {{ form.peopleAmount }}
+
+        <button type="submit" id="button" class="button">Підтвердити</button>
+    </form>
+
+</div>
+
+</body>
+</html>

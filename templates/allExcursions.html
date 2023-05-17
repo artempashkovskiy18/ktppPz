@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius"><a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії
+                з гідом </a></div>
+            <div class="internalLink currentPage downRadius"><a href="/zoo/getAllExcursions" class="navbarTextLink"> all exc </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo/news" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+<div class="textContainer">
+    <table>
+        <thead>
+        <tr>
+            <th>Дата екскурсії</th>
+            <th>Час екскурсії</th>
+            <th>Деталі</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.date }}</td>
+                <td>{{ item.time }}</td>
+                <td><a href="{% url 'excursion' item.id %}"> деталі </a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

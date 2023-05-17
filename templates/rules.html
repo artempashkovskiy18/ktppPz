@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Правила зоопарку</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+    <link href="{% static "Images/zooImg.jpg" %}" rel="icon">
+
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius currentPage"><a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink currentPage"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink downRadius"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії з гідом </a></div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo/news" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+<div class="textContainer">
+    <h1>У зоопарку МОЖНА і ТРЕБА:</h1>
+
+    <ul class="text">
+        <li>Зберігати квиток до кінця відвідування.</li>
+        <li>Звертатися до чергового адміністратора з усіх питань, що вас цікавлять, та у випадках непорозумінь</li>
+        <li>Насолоджуватись знайомством із тваринами та рослинами,
+            які відповідно до Закону «Про природо-заповідний фонд України» мають наукову та природоохоронну цінності.</li>
+    </ul>
+
+    <h1>У зоопарку НЕ можна:</h1>
+
+    <ul class="text">
+        <li>курити поза місцями для куріння <br>
+            (адже тварини не курять і запах тютюну їх страшенно дратує)</li>
+        <li>годувати та турбувати тварин <br>
+            (у нашому зоопарку всі тварини їдять за графіком, якщо його порушити, у них можуть розболітися животи, а ще вони можуть занедужати)</li>
+        <li>заходити за огорожу <br>
+            (наші тварини хороші, але вони дикі та можуть покусати, затоптати або навіть загризти)</li>
+        <li>лишати дітей без уваги та нагляду батьків або інших дорослих-супроводжуючих осіб <br>
+            (тварини також люблять дітей і можуть захотіти залишити їх собі)</li>
+        <li>ставити чи саджати дітей на бар’єри та огорожу (дивіться пункт 3)</li>
+        <li>вживати алкогольні напої та/або знаходитись у стані сп’яніння <br>
+            (наші тварини вас не зрозуміють і навіть можуть почати зневажати)</li>
+        <li>галасувати, кричати, репетувати, голосно гиготіти, тупати або видавати гучні звуки іншим будь-яким способом <br>
+            (у тварин – тонкий слух і різкі шуми викликають у них непередбачувані реакції)</li>
+        <li>псувати дерева, кущі, квіти <br>
+            (наші тварини люблять красу, а зелені насадження – краса нашого зоопарку)</li>
+        <li>фотографувати тварин із застосуванням спалахів <br>
+            (тоді на фото у тварин будуть червоні засвічені очі, до того ж, вони дуже лякаються)</li>
+        <li>кидати у вольєри будь-що <br>
+            (наші тварини можуть те будь-що проковтнути й вдавитися)</li>
+        <li>самочинно переміщувати садово-парковий інвентар <br>
+            (щоб наші тварини не вирішили, що його крадуть, і треба негайно майно захищати)</li>
+        <li>приводити й приносити з собою домашніх тварин <br>
+            (наші тварини схильні до ревнощів і переконані, що для вас вони — єдині й неповторні)</li>
+        <li>пересуватись на велосипедах, гіроскутерах, самокатах, інших транспортних засобах для дорослих,
+            окрім службових та інвалідних <br>
+            (аби тварини не хвилювались за безпеку інших відвідувачів та їхніх дітей)</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

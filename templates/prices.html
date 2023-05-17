@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ціни</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+    <link href="{% static "Images/zooImg.jpg" %}" rel="icon">
+
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius currentPage"> <a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink currentPage"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink downRadius"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії з гідом </a></div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+<div class="textContainer">
+    <h1> Ціни: </h1>
+
+    <p class="text">
+        Для дорослих – 140 грн <br>
+        Пільговий/дитячий – 70 грн <br>
+        Діти до 5 років – безкоштовно <br>
+        --------------------------------------------------------------------------------------------------------------------------<br>
+        70,00 грн – для пільгових категорій відвідувачів (за умови наявності відповідного підтверджуючого документа/посвідчення):
+    </p>
+
+    <ul class="text">
+        <li>дітей віком від 5 до 16 років</li>
+        <li>студентів денної форми навчання</li>
+        <li>пенсіонерів</li>
+        <li>військовослужбовців строкової служби</li>
+        <li>учасників Великої Вітчизняної війни</li>
+        <li>учасників бойових дій</li>
+        <li>учасників ліквідації наслідків аварії на ЧАЕС I категорії</li>
+    </ul>
+
+    <p class="text">
+        Вартість вхідних квитків для багатодітних сімей – 20 грн / 1 особа.
+    </p>
+
+    <h1> Безкоштовно: </h1>
+
+    <ul class="text">
+        <li>Діти до 5 років</li>
+        <li>Діти з інвалідністю віком до 18 років</li>
+        <li>Діти-сироти (до 16 років)</li>
+    </ul>
+
+    <h1>Сплата за паркування:</h1>
+
+    <p class="text"> Паркінг працює цілодобово </p>
+
+    <ul class="text">
+        <li>у будні дні: <br>
+            – безкоштовно до 20 хвилин; <br>
+            – з 08:00 до 20:00 разова сплата 70 грн;</li>
+        <li>у вихідні та святкові дні: <br>
+            – безкоштовно до 20 хвилин; <br>
+            – з 08:00 до 20:00 разова сплата 90 грн.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

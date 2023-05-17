@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Головна</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+    <link href="{% static "Images/zooImg.jpg" %}" rel="icon">
+    <script src = "{% static "JS/main.js" %}"></script>
+
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius currentPage"><a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink downRadius"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії з гідом </a></div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo/news" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+
+<div class="sliderContainer">
+    <div class="slider">
+        <div class="sliderLine">
+            <img src="{% static "Images/sliderImages/gepard.jpg" %}" alt="no pic">
+            <img src="{% static "Images/sliderImages/lions.jpg" %}" alt="no pic">
+            <img src="{% static "Images/sliderImages/tiger.jpg" %}" alt="no pic">
+            <img src="{% static "Images/sliderImages/lama.jpg" %}" alt="no pic">
+            <img src="{% static "Images/sliderImages/buffalo.jpg" %}" alt="no pic">
+            <img src="{% static "Images/sliderImages/bear.jpg" %}" alt="no pic">
+        </div>
+    </div>
+</div>
+
+<p class="mainPageGreeting">
+    Раді вітати Вас у нашому зоопарку, дорогі відвідувачі
+</p>
+
+</body>
+</html>
