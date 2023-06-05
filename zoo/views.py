@@ -26,7 +26,14 @@ def excursion(request):
     if request.method == 'GET':
         form = ExcursionForm(request.GET)
         if form.is_valid():
-            form.save()
+            date = form.cleaned_data['date']
+            time = form.cleaned_data['time']
+            name = form.cleaned_data['name']
+            phone = form.cleaned_data['phone']
+            peopleAmount = form.cleaned_data['peopleAmount']
+            guide = form.cleaned_data['guide']
+            Excursions.objects.create(date=date, time=time, name=name, phone=phone, peopleAmount=peopleAmount,
+                                      guide=guide, isFinished=False)
             return redirect(main)
         else:
             error = 'form was filled wrong'
@@ -38,18 +45,6 @@ def excursion(request):
 
 def news(request):
     return render(request, 'news.html')
-
-
-def excursionReg(request):
-    date = request.GET.get("date")
-    time = request.GET.get("time")
-    phone = request.GET.get("phone")
-    peopleAmount = request.GET.get("peopleAmount")
-
-    excursion = Excursion(date, time, phone, peopleAmount)
-    Excursion.addExcursion(excursion)
-    print(Excursion.excursionsToString())
-    return render(request, 'main.html')
 
 
 def getAllExcursions(request):

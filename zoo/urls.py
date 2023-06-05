@@ -7,9 +7,8 @@ urlpatterns = [
     path('prices/', views.prices),
     path('rules/', views.rules),
     path('history/', views.history),
-    path('excursion/', views.excursion),
+    path('excursion/', views.excursion, name="excursionReg"),
     path('news/', views.news),
-    path('excursionReg/', views.excursionReg),
     path('getAllExcursions/', views.getAllExcursions),
     path('excursion/<int:id>/', views.getExcursion, name="excursion"),
 ]

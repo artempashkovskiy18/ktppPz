@@ -38,7 +38,7 @@
 
 <div class="textContainer">
 
-    <form class="inputDiv" id="form" method="get">
+    <form class="inputDiv" id="form" action="{% url 'excursionReg'%}" method="get">
         <h2>Оберіть дату коли Ви хочете відвідвати наш зоопарк: </h2>
         {{ form.date }}
 

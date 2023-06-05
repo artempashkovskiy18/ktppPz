@@ -1,5 +1,5 @@
 let imageNumber = 0;
-let time = 6000;
+let time = 2000;
 let timer;
 let sliderLine;
 

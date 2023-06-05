@@ -14,7 +14,7 @@ class Account(models.Model):
     phone = models.CharField('phone', max_length=250)
 
     def __str__(self):
-        return str(self.user)
+        return f'{self.user.first_name} {self.user.last_name}'
 
 
 class Excursions(models.Model):
@@ -23,10 +23,7 @@ class Excursions(models.Model):
     phone = models.CharField('phone', max_length=250)
     name = models.CharField('name', max_length=250, default='')
     peopleAmount = models.IntegerField('amount of people')
-    guide = models.OneToOneField(Account,
-                                 null=True,
-                                 on_delete=models.DO_NOTHING,
-                                 limit_choices_to={'user__groups': get_group("Guide")})
+    guide = models.ForeignKey(Account, on_delete=models.DO_NOTHING, null=True)
     isFinished = models.BooleanField(default=False)
 
     def __str__(self):
