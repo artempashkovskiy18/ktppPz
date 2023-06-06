@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
 
 from zoo.forms import ExcursionForm
@@ -48,8 +49,11 @@ def news(request):
 
 
 def getAllExcursions(request):
-    data = Excursions.objects.all()
-    return render(request, "allExcursions.html", {"data": data})
+    if(request.user.is_authenticated):
+        data = Excursions.objects.all()
+        return render(request, "allExcursions.html", {"data": data})
+    else:
+        return redirect('login')
 
 
 def getExcursion(request, id):
@@ -58,3 +62,6 @@ def getExcursion(request, id):
         if item.id == id:
             excursion = item
     return render(request, 'excursionDetail.html', {'excursion': excursion})
+
+# class Login(DataMixin, LoginView):
+#

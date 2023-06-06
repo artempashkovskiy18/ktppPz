@@ -1,9 +1,10 @@
+from django.contrib.auth.views import LoginView
 from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path('', views.main),
+    path('', views.main, name='main'),
     path('prices/', views.prices),
     path('rules/', views.rules),
     path('history/', views.history),
@@ -11,4 +12,5 @@ urlpatterns = [
     path('news/', views.news),
     path('getAllExcursions/', views.getAllExcursions),
     path('excursion/<int:id>/', views.getExcursion, name="excursion"),
+    path('login/', LoginView.as_view(), name="login")
 ]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Логін</title>
+    <link href="{% static "CSS/zooStyles.css" %}" rel="stylesheet">
+    <link href="{% static "Images/zooImg.jpg" %}" rel="icon">
+</head>
+<body>
+
+<div class="siteName"><a>Мій зоопарк</a></div>
+
+<nav>
+    <a href="/zoo"><img src="{% static "Images/zooImg.jpg" %}" alt="no pic"></a>
+    <div class="upperRadius currentPage"><a href="/zoo" class="navbarTextLink firstLevelLink"> Головна </a>
+
+        <div class="containerForInternalLinks">
+            <div class="internalLink currentPage"><a href="/zoo/prices" class="navbarTextLink"> Ціни </a></div>
+            <div class="internalLink"><a href="/zoo/rules" class="navbarTextLink"> Правила </a></div>
+            <div class="internalLink"><a href="/zoo/history" class="navbarTextLink"> Історія </a></div>
+            <div class="internalLink downRadius"><a href="/zoo/excursion" class="navbarTextLink"> Екскурсії з гідом </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="upperRadius downRadius"><a href="/zoo" class="navbarTextLink firstLevelLink"> Новини </a></div>
+    <div class="upperRadius downRadius"><a href="" class="navbarTextLink firstLevelLink"> Наші тварини </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Контакти </a></div>
+    <div class="upperRadius downRadius"><a href="#" class="navbarTextLink firstLevelLink"> Про нас </a></div>
+</nav>
+
+<div class="textContainer">
+    <form class="inputDiv" id="form" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.username.label_tag }}
+        {{ form.username }}
+
+        {{ form.password.label_tag }}
+        {{ form.password }}
+
+        {{ form.errors }}
+
+        <button type="submit" id="button" class="button">Підтвердити</button>
+    </form>
+</div>
+
+</body>
+</html>
